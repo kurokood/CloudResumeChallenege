@@ -1,10 +1,10 @@
 name: Deploy to AWS S3
 
 on:
-  push:
+  push: 
     branches:
-      - main  # Deploy only when changes are pushed to the main branch
-
+      - main
+    
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,7 +23,8 @@ jobs:
       - name: Sync files to S3
         run: |
           aws s3 sync . s3://${{ vars.MONVILLARIN_COM_NAME }} --delete
+        working-directory: Chunk1/site
+
       - name: Invalidate CloudFront Cache
         run: |
-          aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
-        
+          aws cloudfront create-invalidation --distribution-id EQF3Y3Z48KAQW --paths "/*"
