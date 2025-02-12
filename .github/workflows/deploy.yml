@@ -18,7 +18,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.BURNOOK_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.BURNOOK_SECRET_ACCESS_KEY }}
-          aws-region: ${{ vars.MONVILLARIN_COM_REGIONS }}
+          aws-region: ${{ vars.MONVILLARIN_COM_REGION }}
 
       - name: Sync files to S3
         run: |
