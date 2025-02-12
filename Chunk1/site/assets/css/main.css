@@ -1267,6 +1267,16 @@ section,
   color: var(--accent-color);
 }
 
+.case-item {
+  border: 1px solid #606060;
+  padding: 30px;
+  margin: 15px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+}
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
